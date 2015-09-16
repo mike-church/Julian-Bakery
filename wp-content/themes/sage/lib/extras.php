@@ -31,3 +31,12 @@ function excerpt_more() {
   return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
+
+/**
+ * Enqueue Scripts
+ */
+function script_enqueues() {
+    wp_register_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Lato:300,400,700,900', false, null);
+    wp_enqueue_style('google-fonts');
+}
+add_action('wp_enqueue_scripts', 'script_enqueues', 100);
