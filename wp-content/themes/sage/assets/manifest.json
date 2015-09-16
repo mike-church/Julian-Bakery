@@ -25,6 +25,6 @@
     }
   },
   "config": {
-    "devUrl": "http://dev.julianbakery.com"
+    "devUrl": "http://example.dev"
   }
 }
