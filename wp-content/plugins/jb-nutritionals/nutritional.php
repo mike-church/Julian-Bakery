@@ -65,19 +65,19 @@ function nutritionals_register_meta_boxes( $meta_boxes )
 			// HEADING
 			array(
 			'type' => 'heading',
-			'name' => __( 'Serving Size', 'nutrition_' ),
+			'name' => __( 'Basic Facts', 'nutrition_' ),
 			'id'   => 'fake_id', // Not used but needed for plugin
 			),
 			// TEXT
 			array(
-				'name'  => __( 'Size', 'nutrition_' ),
+				'name'  => __( 'Serving Size', 'nutrition_' ),
 				'id'    => "{$prefix}serving_size",
 				'desc' => __( 'Eample: 1 Bar', 'nutrition_' ),
 				'type'  => 'text',
 			),
 			// NUMBER
 			array(
-				'name' => esc_html__( 'Grams', 'nutrition_' ),
+				'name' => esc_html__( 'Serving Size Grams', 'nutrition_' ),
 				'id'   => "{$prefix}serving_grams",
 				'type' => 'number',
 				'min'  => 0,
