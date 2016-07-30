@@ -75,12 +75,12 @@ function nutritionals_register_meta_boxes( $meta_boxes )
 				'desc' => __( 'Eample: 1 Bar', 'nutrition_' ),
 				'type'  => 'text',
 			),
-			// NUMBER
+			// TEXT
 			array(
-				'name' => esc_html__( 'Serving Size Grams', 'nutrition_' ),
-				'id'   => "{$prefix}serving_grams",
-				'type' => 'number',
-				'min'  => 0,
+				'name'  => __( 'Serving Size Weight', 'nutrition_' ),
+				'id'    => "{$prefix}serving_weight",
+				'desc' => __( 'Eample: 65g', 'nutrition_' ),
+				'type'  => 'text',
 			),
 			// NUMBER
 			array(
@@ -117,17 +117,16 @@ function nutritionals_register_meta_boxes( $meta_boxes )
 						'desc' => __( 'Eample: Total Fat', 'nutrition_' ),
 						'type'  => 'text',
 					),
-					// NUMBER
+					// TEXT
 					array(
-						'name' => esc_html__( 'Grams', 'nutrition_' ),
-						'id'   => "{$prefix}fact_grams",
-						'type' => 'number',
-						'min'  => 0,
-						'step' => 1,
+						'name'  => __( 'Weight', 'nutrition_' ),
+						'id'    => "{$prefix}fact_weight",
+						'desc' => __( 'Eample: 6g or 400mg', 'nutrition_' ),
+						'type'  => 'text',
 					),
 					// NUMBER
 					array(
-						'name' => esc_html__( 'Daily Value', 'nutrition_' ),
+						'name' => esc_html__( 'Daily Value %', 'nutrition_' ),
 						'id'   => "{$prefix}fact_dv",
 						'type' => 'number',
 						'min'  => 0,
