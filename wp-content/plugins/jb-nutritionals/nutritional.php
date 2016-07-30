@@ -81,7 +81,6 @@ function nutritionals_register_meta_boxes( $meta_boxes )
 				'id'   => "{$prefix}serving_grams",
 				'type' => 'number',
 				'min'  => 0,
-				'step' => 1,
 			),
 			// HEADING
 			array(
