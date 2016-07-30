@@ -82,6 +82,20 @@ function nutritionals_register_meta_boxes( $meta_boxes )
 				'type' => 'number',
 				'min'  => 0,
 			),
+			// NUMBER
+			array(
+				'name' => esc_html__( 'Calories', 'nutrition_' ),
+				'id'   => "{$prefix}calories",
+				'type' => 'number',
+				'min'  => 0,
+			),
+			// NUMBER
+			array(
+				'name' => esc_html__( 'Calories from Fat', 'nutrition_' ),
+				'id'   => "{$prefix}calories_from_fat",
+				'type' => 'number',
+				'min'  => 0,
+			),
 			// HEADING
 			array(
 			'type' => 'heading',
