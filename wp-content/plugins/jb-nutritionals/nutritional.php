@@ -25,7 +25,21 @@ function nutritionals_register_meta_boxes( $meta_boxes )
 			// HEADING
 			array(
 			'type' => 'heading',
-			'name' => __( 'Please limit to 4 facts.', 'nutrition_' ),
+			'name' => __( 'Net Carbs', 'nutrition_' ),
+			'id'   => 'fake_id', // Not used but needed for plugin
+			),
+			// NUMBER
+			array(
+				'name' => esc_html__( 'Net Carbs', 'nutrition_' ),
+				'id'   => "{$prefix}net_carbs",
+				'type' => 'number',
+				'min'  => 0,
+				'step' => 1,
+			),
+			// HEADING
+			array(
+			'type' => 'heading',
+			'name' => __( 'Please limit to 3 facts.', 'nutrition_' ),
 			'id'   => 'fake_id', // Not used but needed for plugin
 			),
 			// GROUP
