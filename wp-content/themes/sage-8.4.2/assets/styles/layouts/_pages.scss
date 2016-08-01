@@ -2,10 +2,19 @@
 	box-sizing:border-box;
 	height:100vh;
 }
+.hero {
+	position: relative;
+	background-color:$light-grey-4;
+	.vertical-center {
+		@include vertical-align();
+	}
+}
 
 /* Custom, iPhone Retina */ 
 @media only screen and (min-width : 320px) {
- 
+	.hero {
+		height:300px;
+	} 
 }
 
 /* Extra Small Devices, Phones */ 
@@ -15,7 +24,9 @@
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
-
+	.hero {
+		height:400px;
+	}
 }
 
 /* Medium Devices, Desktops */

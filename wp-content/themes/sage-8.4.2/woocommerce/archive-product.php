@@ -20,9 +20,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
+<section class="section-padding hero">
+	<div class="vertical-center">
 
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<h1 class="text-center margin-bottom-0">Shop</h1>
+					</div>
+				</div>
+			</div>
 
+	</div>
+</section>
 
+<section class="section-padding">
 
 
 
@@ -37,13 +49,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	?>
 
 <div class="row">
-	<div class="col-sm-3">
+	<div class="col-sm-3">		
+		<button onclick="FWP.reset()" class="facetwp-reset">Reset</button>
 		<?php echo do_shortcode('[facetwp facet="product_type"]') ;?>	
 		<?php echo do_shortcode('[facetwp facet="product_categories"]') ;?>		
 	</div>
 	<div class="col-sm-9">
 
-<div class="facetwp-template">
+		<div class="facetwp-template">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -85,7 +98,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<?php endif; ?>
 
-	</div>
+			</div>
 		</div>
 
 	<?php
@@ -97,4 +110,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 		do_action( 'woocommerce_after_main_content' );
 	?>
 
-
+</section>

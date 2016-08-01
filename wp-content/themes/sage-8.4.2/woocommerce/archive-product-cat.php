@@ -42,6 +42,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php endif; ?>
 <div class="row">
 	<div class="col-sm-3">
+		<button onclick="FWP.reset()" class="facetwp-reset">Reset</button>
 		<?php echo do_shortcode('[facetwp facet="product_type"]') ;?>	
 		<?php echo do_shortcode('[facetwp facet="product_categories"]') ;?>		
 	</div>
