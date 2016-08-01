@@ -35,7 +35,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 		 */
 		do_action( 'woocommerce_before_main_content' );
 	?>
+<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 
+			<h1 class="page-title"><?php woocommerce_page_title(); ?></h1>
+
+		<?php endif; ?>
 <div class="row">
 	<div class="col-sm-3">
 		<?php echo do_shortcode('[facetwp facet="product_type"]') ;?>	

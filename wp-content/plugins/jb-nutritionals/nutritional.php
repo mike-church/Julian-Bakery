@@ -25,21 +25,7 @@ function nutritionals_register_meta_boxes( $meta_boxes )
 			// HEADING
 			array(
 			'type' => 'heading',
-			'name' => __( 'Net Carbs', 'nutrition_' ),
-			'id'   => 'fake_id', // Not used but needed for plugin
-			),
-			// NUMBER
-			array(
-				'name' => esc_html__( 'Net Carbs', 'nutrition_' ),
-				'id'   => "{$prefix}net_carbs",
-				'type' => 'number',
-				'min'  => 0,
-				'step' => 1,
-			),
-			// HEADING
-			array(
-			'type' => 'heading',
-			'name' => __( 'Please limit to 3 facts.', 'nutrition_' ),
+			'name' => __( 'Facts (Please limit to 3)', 'nutrition_' ),
 			'id'   => 'fake_id', // Not used but needed for plugin
 			),
 			// GROUP
@@ -54,18 +40,30 @@ function nutritionals_register_meta_boxes( $meta_boxes )
 					array(
 						'name'  => __( 'Fact', 'nutrition_' ),
 						'id'    => "{$prefix}highlight_fact",
-						'desc' => __( 'Eample: Calories', 'nutrition_' ),
+						'desc' => __( 'Eample: Protein', 'nutrition_' ),
 						'type'  => 'text',
 					),
-					// NUMBER
+					// TEXT
 					array(
-						'name' => esc_html__( 'Grams', 'nutrition_' ),
-						'id'   => "{$prefix}highlight_grams",
-						'type' => 'number',
-						'min'  => 0,
-						'step' => 1,
+						'name'  => __( 'Value', 'nutrition_' ),
+						'id'    => "{$prefix}highlight_value",
+						'desc' => __( 'Eample: 20g', 'nutrition_' ),
+						'type'  => 'text',
 					),
 				),
+			),			
+			// HEADING
+			array(
+			'type' => 'heading',
+			'name' => __( 'Net Carbs', 'nutrition_' ),
+			'id'   => 'fake_id', // Not used but needed for plugin
+			),
+			// NUMBER
+			array(
+				'name' => esc_html__( 'Net Carbs', 'nutrition_' ),
+				'id'   => "{$prefix}highlight_net_carbs",
+				'type' => 'number',
+				'min'  => 0,
 			),
 		),
 	);
@@ -211,6 +209,19 @@ function nutritionals_register_meta_boxes( $meta_boxes )
 			// TEXTAREA
 			array(
 				'id'   => "{$prefix}allergens",
+				'type' => 'textarea',
+				'cols' => 20,
+				'rows' => 6,
+			),
+			// HEADING
+			array(
+			'type' => 'heading',
+			'name' => __( 'Additional Notes', 'nutrition_' ),
+			'id'   => 'fake_id', // Not used but needed for plugin
+			),
+			// TEXTAREA
+			array(
+				'id'   => "{$prefix}additional_notes",
 				'type' => 'textarea',
 				'cols' => 20,
 				'rows' => 6,
