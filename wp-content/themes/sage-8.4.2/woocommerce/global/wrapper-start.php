@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $template = get_option( 'template' );
 
-switch( $template ) {
+/*switch( $template ) {
 	case 'twentyeleven' :
 		echo '<div id="primary"><div id="content" role="main" class="twentyeleven">';
 		break;
@@ -41,6 +41,6 @@ switch( $template ) {
 		echo '<div id="primary" class="content-area twentysixteen"><main id="main" class="site-main" role="main">';
 		break;
 	default :
-		echo '<div class="container"><div class="row"><div class="col-sm-12">';
+		echo '<div class="container"><div class="row"><div class="col-sm-12">Fuck you';
 		break;
-}
+}*/

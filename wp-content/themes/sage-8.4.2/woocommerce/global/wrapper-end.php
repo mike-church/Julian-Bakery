@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $template = get_option( 'template' );
 
-switch( $template ) {
+/*switch( $template ) {
 	case 'twentyeleven' :
 		echo '</div></div>';
 		break;
@@ -44,4 +44,4 @@ switch( $template ) {
 	default :
 		echo '</div></div></div>';
 		break;
-}
+}*/

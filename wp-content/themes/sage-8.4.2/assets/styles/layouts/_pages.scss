@@ -9,6 +9,25 @@
 		@include vertical-align();
 	}
 }
+.single-product {
+	.price {
+		.amount {
+			font-weight: $font-bold;
+			font-size: 32px;
+			color:$brand;
+		}
+		del {
+			display: block;
+			.amount {
+				font-size: 16px;	
+				color:$grey;		
+			}
+		}
+		ins {
+			text-decoration: none;
+		}
+	}
+}
 
 /* Custom, iPhone Retina */ 
 @media only screen and (min-width : 320px) {
