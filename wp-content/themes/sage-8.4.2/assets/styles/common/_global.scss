@@ -5,6 +5,7 @@ body {
     background-color: white;
     position: fixed;
 }
+main {padding-top:80px;}
 .frame {
 	position:fixed;
 	top:0;
@@ -111,18 +112,7 @@ body {
 	hr {
 	    border-top: 5px solid $light-grey-4;
 	    margin:30px 0;
-	}
-	.main {
-		padding:60px 5px;	
-	}
-	.home {	
-		.main {
-			padding:0 5px;	
-		}
-	}
-	.frame {
-		border:white solid 5px;
-	}    
+	}  
 }
 
 /* Extra Small Devices, Phones */ 
@@ -150,17 +140,6 @@ body {
 	p, li {
 		font-size:16px;
 	}
-	.main {
-		padding:60px 15px;	
-	}	
-	.home {	
-		.main {
-			padding:0 15px;	
-		}
-	}
-	.frame {
-		border:white solid 15px;
-	}
 }
 
 /* Medium Devices, Desktops */
@@ -182,17 +161,6 @@ body {
 	}
 	p, li {
 		font-size:18px;
-	}
-	.main {
-		padding:60px 30px;	
-	}
-	.home {	
-		.main {
-			padding:0 30px;	
-		}
-	}
-	.frame {
-		border:white solid 30px;
 	}
 }
 
