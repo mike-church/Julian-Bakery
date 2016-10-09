@@ -1,0 +1,11 @@
+.card {
+	border:$light-grey-4 solid 1px;
+	padding-bottom:50px;
+	position: relative;
+	.btn-container {
+		position: absolute;
+		bottom:0;
+		left:0;
+		width:100%;
+	}
+}

@@ -35,8 +35,6 @@ add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 /**
  * Woocommerce theme support
  */
-
-
 add_action( 'after_setup_theme', __NAMESPACE__ . '\\woocommerce_support' );
 function woocommerce_support() {
     add_theme_support( 'woocommerce' );
@@ -94,4 +92,17 @@ function shared_type() {
   );
 }
 
+/**
+ * Match Height
+ */
+function match_height( $atts ) {
+  ob_start(); 
+  ?>
+  <script>jQuery(function(a){a(".match-height").matchHeight({byRow:!0})});</script>
+  <?php
+  $content = ob_get_contents();
+  ob_end_clean();
+  return $content;
+}
+add_shortcode('match-height', __NAMESPACE__ . '\\match_height');
 

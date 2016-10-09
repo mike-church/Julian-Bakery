@@ -16,4 +16,14 @@
  * @version     2.0.0
  */
 ?>
-<ul class="products">
+<section class="section-padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-3 col-lg-2">
+				<?php echo do_shortcode('[facetwp facet="product_type"]') ;?>
+				<?php echo do_shortcode('[facetwp facet="product_categories"]') ;?>
+			</div>
+			<div class="col-sm-9 col-lg-10">
+				<div class="row">
+
+
