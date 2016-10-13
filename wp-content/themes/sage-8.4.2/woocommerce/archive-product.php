@@ -22,82 +22,47 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 
-			<?php
-				/**
-				 * woocommerce_before_main_content hook.
-				 *
-				 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
-				 * @hooked woocommerce_breadcrumb - 20
-				 */
-				do_action( 'woocommerce_before_main_content' );
-			?>
 
-				<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
+<section class="section-padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-3 col-lg-2">
+				<button onclick="FWP.reset()" class="btn btn-primary btn-block">Clear All Filters</button>
+				<?php echo do_shortcode('[facetwp facet="product_type"]') ;?>
+				<?php echo do_shortcode('[facetwp facet="product_categories"]') ;?>
+				<?php echo do_shortcode('[facetwp facet="tags"]') ;?>
+			</div>
+			<div class="col-sm-9 col-lg-10">
+				<div class="row facetwp-template">					
 
-					<h1 class="page-title"><?php woocommerce_page_title(); ?></h1>
+					<?php if ( have_posts() ) : ?>
 
-				<?php endif; ?>
+					<?php while ( have_posts() ) : the_post(); ?>
+					<?php wc_get_template_part( 'content', 'product' ); ?>
+					<?php endwhile; // end of the loop. ?>
 
-				<?php
-					/**
-					 * woocommerce_archive_description hook.
-					 *
-					 * @hooked woocommerce_taxonomy_archive_description - 10
-					 * @hooked woocommerce_product_archive_description - 10
-					 */
-					do_action( 'woocommerce_archive_description' );
-				?>
+					<?php elseif ( ! woocommerce_product_subcategories( array( 'before' => woocommerce_product_loop_start( false ), 'after' => woocommerce_product_loop_end( false ) ) ) ) : ?>
 
-				<div class="facetwp-template">
+						<?php wc_get_template( 'loop/no-products-found.php' ); ?>
 
-				<?php if ( have_posts() ) : ?>
+					<?php endif; ?>
 
-					<?php
-						/**
-						 * woocommerce_before_shop_loop hook.
-						 *
-						 * @hooked woocommerce_result_count - 20
-						 * @hooked woocommerce_catalog_ordering - 30
-						 */
-						do_action( 'woocommerce_before_shop_loop' );
-					?>
+				</div>				
+			</div>
+		</div>
+	</div>
+</section>
+<?php echo do_shortcode('[facetwp pager="true"]') ;?>
+<?php echo do_shortcode('[facetwp per_page="true"]') ;?>
+<script>
+(function($) {
+    $(function() {
+        FWP.loading_handler = function() { }
+    });
+})(jQuery);
+</script>
 
-					<?php woocommerce_product_loop_start(); ?>
 
-						<?php woocommerce_product_subcategories(); ?>
 
-						<?php while ( have_posts() ) : the_post(); ?>
-
-							<?php wc_get_template_part( 'content', 'product' ); ?>
-
-						<?php endwhile; // end of the loop. ?>
-
-					<?php woocommerce_product_loop_end(); ?>
-
-					<?php
-						/**
-						 * woocommerce_after_shop_loop hook.
-						 *
-						 * @hooked woocommerce_pagination - 10
-						 */
-						do_action( 'woocommerce_after_shop_loop' );
-					?>
-
-				<?php elseif ( ! woocommerce_product_subcategories( array( 'before' => woocommerce_product_loop_start( false ), 'after' => woocommerce_product_loop_end( false ) ) ) ) : ?>
-
-					<?php wc_get_template( 'loop/no-products-found.php' ); ?>
-
-				<?php endif; ?>
-
-				</div>
-
-			<?php
-				/**
-				 * woocommerce_after_main_content hook.
-				 *
-				 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
-				 */
-				do_action( 'woocommerce_after_main_content' );
-			?>
 
 
