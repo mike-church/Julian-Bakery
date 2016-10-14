@@ -2,9 +2,9 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	color:$default-text-color;
     letter-spacing: -0.3px;
-    background-color: #f1f1f1;
+    background-color: white;
 }
-main {padding-top:80px;}
+main {padding-top:60px;}
 .frame {
 	position:fixed;
 	top:0;
@@ -52,6 +52,10 @@ main {padding-top:80px;}
 .background-light-grey-5 {background-color:$light-grey-5;}
 .background-white {background-color:white;}
 .background-black {background-color:$black;}
+
+.color-white {
+	color:white;
+}
 
 //margins
 .margin-bottom-0 {

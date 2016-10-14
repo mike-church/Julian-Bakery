@@ -21,15 +21,36 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-
-
-<section class="section-padding">
+<section class="section-padding background-warning">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-3 col-lg-2">
+			<div class="col-sm-12">
+				<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
+				<h1 class="color-white margin-bottom-0"><?php woocommerce_page_title(); ?></h1>
+				<?php endif; ?>				
+			</div>
+		</div>
+	</div>
+</section>
+<section class="section-padding">
+	<div class="container">
+		<div class="row margin-bottom-30">
+			<div class="col-sm-3 col-lg-2">				
 				<button onclick="FWP.reset()" class="btn btn-primary btn-block">Clear All Filters</button>
+			</div>
+			<div class="col-sm-9 col-lg-10">
+				<?php echo do_shortcode('[facetwp counts="true"]') ;?>
+            	<?php echo do_shortcode('[facetwp sort="true"]') ;?>
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-3 col-lg-2 sidebar">
+				<h6 class="tax-title">Diet Type</h6>
 				<?php echo do_shortcode('[facetwp facet="product_type"]') ;?>
+				<h6 class="tax-title">Categories</h6>
 				<?php echo do_shortcode('[facetwp facet="product_categories"]') ;?>
+				<h6 class="tax-title">Features</h6>
 				<?php echo do_shortcode('[facetwp facet="tags"]') ;?>
 			</div>
 			<div class="col-sm-9 col-lg-10">
