@@ -28,6 +28,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 }
 ?>
 <div class="col-sm-6 col-md-4">
+
 	<div class="card margin-bottom-30 match-height">
     
 		<?php
@@ -46,7 +47,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 		 */
 		do_action( 'woocommerce_before_shop_loop_item_title' );
 		?>
-		
+
 		<div class="text">
 			<?php
 			/**
@@ -75,6 +76,12 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 		 */
 		do_action( 'woocommerce_after_shop_loop_item' );
 		?>
+		<div class="overlay">
+			<div class="vertical-center text-center">
+				<a href="<?php the_permalink() ?>" class="btn btn-default btn-lg">View</a>
+			</div>
+		</div>
 
 	</div>
+
 </div>
