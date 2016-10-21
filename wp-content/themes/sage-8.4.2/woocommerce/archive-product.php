@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <?php
-if ( is_tax('type','vegan') ) { ?>
+if ( is_tax('type','paleo') ) { ?>
     <section class="section-padding background-primary">
 		<div class="container">
 			<div class="row">
@@ -35,7 +35,7 @@ if ( is_tax('type','vegan') ) { ?>
 	</section>
     <?php
 }
-elseif ( is_tax('type','paleo') ) { ?>
+elseif ( is_tax('type','primal') ) { ?>
     <section class="section-padding background-secondary">
 		<div class="container">
 			<div class="row">
