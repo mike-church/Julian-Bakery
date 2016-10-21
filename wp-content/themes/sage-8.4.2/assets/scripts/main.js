@@ -29,6 +29,17 @@
             .matchHeight('remove')
             .matchHeight();
           });
+
+          $(document).on('facetwp-loaded', function() {
+            $('.facetwp-facet').each(function() {
+              var facet_name = $(this).attr('data-name');
+              var facet_label = FWP.settings.labels[facet_name];
+              if ($('.facet-label[data-for="' + facet_name + '"]').length < 1) {
+              $(this).before('<h6 class="facet-label" data-for="' + facet_name + '">' + facet_label + '</h6>');
+              }
+            });
+          });
+
         });
       },
       finalize: function() {

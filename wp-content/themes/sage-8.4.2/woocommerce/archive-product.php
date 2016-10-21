@@ -20,18 +20,65 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 ?>
-
-<section class="section-padding background-warning">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12">
-				<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
-				<h1 class="color-white margin-bottom-0"><?php woocommerce_page_title(); ?></h1>
-				<?php endif; ?>				
+<?php
+if ( is_tax('type','vegan') ) { ?>
+    <section class="section-padding background-primary">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
+					<h1 class="color-white margin-bottom-0"><?php woocommerce_page_title(); ?></h1>
+					<?php endif; ?>				
+				</div>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
+    <?php
+}
+elseif ( is_tax('type','paleo') ) { ?>
+    <section class="section-padding background-secondary">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
+					<h1 class="color-white margin-bottom-0"><?php woocommerce_page_title(); ?></h1>
+					<?php endif; ?>				
+				</div>
+			</div>
+		</div>
+	</section>
+    <?php
+}
+elseif ( is_tax('type','pegan') ) { ?>
+    <section class="section-padding background-primary-alt-1">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
+					<h1 class="color-white margin-bottom-0"><?php woocommerce_page_title(); ?></h1>
+					<?php endif; ?>				
+				</div>
+			</div>
+		</div>
+	</section>
+    <?php
+}
+else { ?>
+    <section class="section-padding background-warning">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
+					<h1 class="color-white margin-bottom-0"><?php woocommerce_page_title(); ?></h1>
+					<?php endif; ?>				
+				</div>
+			</div>
+		</div>
+	</section>
+    <?php
+}
+?>
+
 <section class="section-padding">
 	<div class="container">
 		<div class="row margin-bottom-30">
@@ -39,19 +86,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<button onclick="FWP.reset()" class="btn btn-primary btn-block">Clear All Filters</button>
 			</div>
 			<div class="col-sm-9 col-lg-10">
-				<?php echo do_shortcode('[facetwp counts="true"]') ;?>
-            	<?php echo do_shortcode('[facetwp sort="true"]') ;?>
+				<?php echo facetwp_display( 'counts' );?>
+				<?php echo facetwp_display( 'sort' );?>
 
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-sm-3 col-lg-2 sidebar">
-				<h6 class="tax-title">Diet Type</h6>
-				<?php echo do_shortcode('[facetwp facet="product_type"]') ;?>
-				<h6 class="tax-title">Categories</h6>
-				<?php echo do_shortcode('[facetwp facet="product_categories"]') ;?>
-				<h6 class="tax-title">Features</h6>
-				<?php echo do_shortcode('[facetwp facet="tags"]') ;?>
+				<div class="widget">
+					<div class="diet-type">
+						<?php echo facetwp_display( 'facet', 'product_type' ); ?>
+					</div>
+				</div>
+				<div class="widget">
+					<?php echo facetwp_display( 'facet', 'product_categories' ); ?>
+				</div>
+				<div class="widget">
+					<?php echo facetwp_display( 'facet', 'tags' ); ?>
+				</div>
 			</div>
 			<div class="col-sm-9 col-lg-10">
 				<div class="row facetwp-template">					
@@ -73,8 +125,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div>
 	</div>
 </section>
-<?php echo do_shortcode('[facetwp pager="true"]') ;?>
-<?php echo do_shortcode('[facetwp per_page="true"]') ;?>
+<section class="margin-bottom-60">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2">
+				<?php echo facetwp_display( 'counts' );?>			
+				<?php echo facetwp_display( 'per_page' );?>			
+			</div>
+		</div>
+	</div>
+</section>
+
 <script>
 (function($) {
     $(function() {
