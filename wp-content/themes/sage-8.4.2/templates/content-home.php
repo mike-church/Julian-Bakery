@@ -11,34 +11,31 @@
 				</div>
 			</div>			
 		</div>
-		<div class="col-sm-4 block-two">
+		<div class="col-sm-4 block-two" style="background-image:url(/wp-content/uploads/block-two.jpg);">
 			<div class="block">
 				<div class="vertical-center">
 					<div class="padding-30">
-						<h5 class="text-center margin-bottom-5 color-white">Shop Paleo</h5>
-						<p class="text-center color-white">stuff</p>
-						<p class="text-center margin-bottom-0"><a href="/diet/paleo" class="btn btn-default">Shop</a></p>
+						<h5 class="text-center margin-bottom-15 color-white">Shop Paleo</h5>
+						<div class="text-center margin-bottom-0"><a href="/diet/paleo" class="btn btn-default">Shop</a></div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="col-sm-4 block-three">
+		<div class="col-sm-4 block-three" style="background-image:url(/wp-content/uploads/block-three.jpg);">
 			<div class="block">
 				<div class="vertical-center">
 					<div class="padding-30">
-						<h5 class="text-center margin-bottom-5 color-white">Shop Pegan</h5>
-						<p class="text-center color-white">stuff</p>
+						<h5 class="text-center margin-bottom-15 color-white">Shop Pegan</h5>
 						<p class="text-center margin-bottom-0"><a href="/diet/pegan" class="btn btn-default">Shop</a></p>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="col-sm-4 block-four">
+		<div class="col-sm-4 block-four" style="background-image:url(/wp-content/uploads/block-four.jpg);">
 			<div class="block">
 				<div class="vertical-center">
 					<div class="padding-30">
-						<h5 class="text-center margin-bottom-5 color-white">Shop Primal</h5>
-						<p class="text-center color-white">stuff</p>
+						<h5 class="text-center margin-bottom-15 color-white">Shop Primal</h5>
 						<p class="text-center margin-bottom-0"><a href="/diet/primal" class="btn btn-default">Shop</a></p>
 					</div>
 				</div>
