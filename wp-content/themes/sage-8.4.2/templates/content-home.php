@@ -1,34 +1,49 @@
 <section class="home-hero" style="margin-top:-60px;">
-	<div class="row no-gutters" style="height:60vh; position: relative;">
-		<div class="col-sm-12 background-black" style="height:60vh;">
-			<div style="padding:120px 30px 30px 30px">
-				<h2 class="color-white">Shop</h2>
+	<div class="row no-gutters">
+		<div class="col-sm-12 block-one" style="background-image:url(/wp-content/uploads/block-one.jpg);">
+			<div class="block">
+				<div class="vertical-center">
+					<div class="padding-30">
+						<h1 class="text-center margin-bottom-15 color-white">Welcome to Julian Bakery</h1>
+						<p class="text-center color-white">A dedicated gluten-free and GMO-free company and largest Paleo manufacturer in the world.</p>
+						<p class="text-center margin-bottom-0"><a href="/shop" class="btn btn-default btn-lg">Shop All Products</a></p>
+					</div>
+				</div>
+			</div>			
+		</div>
+		<div class="col-sm-4 block-two">
+			<div class="block">
+				<div class="vertical-center">
+					<div class="padding-30">
+						<h5 class="text-center margin-bottom-5 color-white">Shop Paleo</h5>
+						<p class="text-center color-white">stuff</p>
+						<p class="text-center margin-bottom-0"><a href="/diet/paleo" class="btn btn-default">Shop</a></p>
+					</div>
+				</div>
 			</div>
 		</div>
-		<a href="/shop" style="position:absolute; top:0; left:0; width:100%; height:100%;"></a>
-	</div>
-	<div class="row no-gutters" style="height:40vh;">
-		<div class="col-sm-4 background-primary" style="height:40vh; position:relative;">
-			<div style="padding:30px">
-				<h5><a href="/shop" class="color-white">Paleo Protein Bars</a></h5>
+		<div class="col-sm-4 block-three">
+			<div class="block">
+				<div class="vertical-center">
+					<div class="padding-30">
+						<h5 class="text-center margin-bottom-5 color-white">Shop Pegan</h5>
+						<p class="text-center color-white">stuff</p>
+						<p class="text-center margin-bottom-0"><a href="/diet/pegan" class="btn btn-default">Shop</a></p>
+					</div>
+				</div>
 			</div>
-			<a href="/paleo-protein-bars" style="position:absolute; top:0; left:0; width:100%; height:100%;"></a>
 		</div>
-		<div class="col-sm-4 background-secondary" style="height:40vh;">
-			<p>test</p>
-		</div>
-		<div class="col-sm-4 background-warning" style="height:40vh;">
-			<p>test</p>
+		<div class="col-sm-4 block-four">
+			<div class="block">
+				<div class="vertical-center">
+					<div class="padding-30">
+						<h5 class="text-center margin-bottom-5 color-white">Shop Primal</h5>
+						<p class="text-center color-white">stuff</p>
+						<p class="text-center margin-bottom-0"><a href="/diet/primal" class="btn btn-default">Shop</a></p>
+					</div>
+				</div>
+			</div>
 		</div>
 		
-	</div>
-</section>
-<section class="section-padding">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12">
-				<p>New Product query</p>
-			</div>
-		</div>
 	</div>
 </section>

@@ -1,9 +1,12 @@
 .btn, .button {
 	text-transform:uppercase;
-	border-radius:1px !important;
-	color:white !important;
+	border-radius:2px !important;
+	border:none !important;
 	font-weight:$font-normal !important;
 }
 .button {
 	background-color:$primary !important;
+}
+.btn-default {
+	color:$primary;
 }

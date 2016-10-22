@@ -9,6 +9,65 @@
 		@include vertical-align();
 	}
 }
+.home {
+	.block-one {
+		height:60vh;
+		position: relative;
+		background-repeat:no-repeat;
+		background-position:center bottom;
+		.block {
+			position: absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			z-index:10;
+			p {
+				font-weight: $font-normal;
+			}
+		}
+	}
+	.block-two, .block-three, .block-four {
+		height:40vh;
+		position: relative;
+		.block {
+			position: absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			z-index:10;
+			h5 {
+				text-transform: uppercase;
+			}
+			p {
+				font-weight: $font-normal;
+			}
+		}
+	}
+	.block-one:before, .block-two:before, .block-three:before, .block-four:before {
+		content:'';
+		position: absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		z-index:1;
+		mix-blend-mode:multiply;
+	}
+	.block-one:before {		
+		background-color:$brand;
+	}
+	.block-two:before {
+		background-color:$peter-river;
+	}
+	.block-three:before {
+		background-color:$sun-flower;
+	}	
+	.block-four:before {
+		background-color:$amethyst;
+	}
+}
 .single-product {
 	.price {
 		.amount {
@@ -28,6 +87,25 @@
 		}
 	}
 }
+.masthead {
+	height:200px;
+	background-position:center center;
+	background-size:cover;
+	background-repeat:no-repeat;
+	position: relative;
+}
+.masthead:before {
+	content:'';
+	z-index: 1;
+	mix-blend-mode: multiply;
+	background-color: $warning;
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+
 
 /* Custom, iPhone Retina */ 
 @media only screen and (min-width : 320px) {

@@ -64,7 +64,7 @@ elseif ( is_tax('type','pegan') ) { ?>
     <?php
 }
 else { ?>
-    <section class="section-padding background-warning">
+    <section class="masthead shop-masthead" style="background-image:url(/wp-content/uploads/shop-masthead.jpg);">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
