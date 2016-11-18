@@ -64,12 +64,12 @@ elseif ( is_tax('type','pegan') ) { ?>
     <?php
 }
 else { ?>
-    <section class="masthead shop-masthead" style="background-image:url(/wp-content/uploads/shop-masthead.jpg);">
+    <section class="background-primary" style="padding-top:30px; padding-bottom:30px;">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
 					<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
-					<h1 class="color-white margin-bottom-0"><?php woocommerce_page_title(); ?></h1>
+					<h3 class="color-white margin-bottom-0"><?php woocommerce_page_title(); ?></h3>
 					<?php endif; ?>				
 				</div>
 			</div>

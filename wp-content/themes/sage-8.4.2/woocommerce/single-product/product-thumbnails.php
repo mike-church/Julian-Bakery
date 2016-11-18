@@ -27,17 +27,44 @@ $video = rwmb_meta( 'video_youtube_id' );
 
 ?>
 
-<div class="hidden-xs" style="border-top:#ccc solid 1px;">
+<?php if ( ! empty( $video ) ) { ?>
 
-	<?php if ( ! empty( $video ) ) { ?>
-
+	<div class="row">
 		<div class="col-sm-4 col-md-3 margin-bottom-30">
 			<img src="http://placehold.it/180x179" class="img-responsive">
 		</div>
+		<?php if ( $attachment_ids ) {
+			foreach ( $attachment_ids as $attachment_id ) {
 
-	<?php } ?>
+				$classes = array( 'zoom' );
+				$image_class = implode( ' ', $classes );
+				$props = wc_get_product_attachment_props( $attachment_id, $post );
 
-	<?php if ( $attachment_ids ) {
+				if ( ! $props['url'] ) {
+					continue;
+				}
+
+				echo apply_filters(
+					'woocommerce_single_product_image_thumbnail_html',
+					sprintf(
+						'<div class="col-sm-4 col-md-3 margin-bottom-30"><a href="%s" class="%s" title="%s" data-rel="prettyPhoto[product-gallery]">%s</a></div>',
+						esc_url( $props['url'] ),
+						esc_attr( $image_class ),
+						esc_attr( $props['caption'] ),
+						wp_get_attachment_image( $attachment_id, apply_filters( 'single_product_small_thumbnail_size', 'shop_thumbnail' ), 0, $props )
+					),
+					$attachment_id,
+					$post->ID,
+					esc_attr( $image_class )
+				);
+			} 
+		} ?>
+	</div>
+
+<?php } else { ?>
+
+	<?php if ( $attachment_ids ) { ?>
+		<div class="row"> <?php
 		foreach ( $attachment_ids as $attachment_id ) {
 
 			$classes = array( 'zoom' );
@@ -61,9 +88,17 @@ $video = rwmb_meta( 'video_youtube_id' );
 				$post->ID,
 				esc_attr( $image_class )
 			);
-		} 
+		} ?>
+		</div> <?php
 	} ?>
-</div>
+
+<?php } ?>
+
+		
+
+
+
+	
 
 
 
