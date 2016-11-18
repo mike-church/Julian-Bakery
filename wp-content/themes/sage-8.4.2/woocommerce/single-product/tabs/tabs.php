@@ -39,7 +39,6 @@ if ( ! empty( $tabs ) ) : ?>
                 	<?php call_user_func( $tab['callback'], $key, $tab ); ?>
                 </div>
             <?php endforeach; ?>
-
             </div>
         </div>
     </div>
