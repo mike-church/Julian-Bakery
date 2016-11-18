@@ -23,27 +23,26 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $post, $product, $woocommerce;
 
 $attachment_ids = $product->get_gallery_attachment_ids();
+$video = rwmb_meta( 'video_youtube_id' );
 
-if ( $attachment_ids ) {
-	$loop 		= 0;
-	$columns 	= apply_filters( 'woocommerce_product_thumbnails_columns', 3 );
-	?>
-	<div class="thumbnails <?php echo 'columns-' . $columns; ?>"><?php
+?>
 
+<div class="hidden-xs" style="border-top:#ccc solid 1px;">
+
+	<?php if ( ! empty( $video ) ) { ?>
+
+		<div class="col-sm-4 col-md-3 margin-bottom-30">
+			<img src="http://placehold.it/180x179" class="img-responsive">
+		</div>
+
+	<?php } ?>
+
+	<?php if ( $attachment_ids ) {
 		foreach ( $attachment_ids as $attachment_id ) {
 
 			$classes = array( 'zoom' );
-
-			if ( $loop === 0 || $loop % $columns === 0 ) {
-				$classes[] = 'first';
-			}
-
-			if ( ( $loop + 1 ) % $columns === 0 ) {
-				$classes[] = 'last';
-			}
-
 			$image_class = implode( ' ', $classes );
-			$props       = wc_get_product_attachment_props( $attachment_id, $post );
+			$props = wc_get_product_attachment_props( $attachment_id, $post );
 
 			if ( ! $props['url'] ) {
 				continue;
@@ -52,7 +51,7 @@ if ( $attachment_ids ) {
 			echo apply_filters(
 				'woocommerce_single_product_image_thumbnail_html',
 				sprintf(
-					'<a href="%s" class="%s" title="%s" data-rel="prettyPhoto[product-gallery]">%s</a>',
+					'<div class="col-sm-4 col-md-3 margin-bottom-30"><a href="%s" class="%s" title="%s" data-rel="prettyPhoto[product-gallery]">%s</a></div>',
 					esc_url( $props['url'] ),
 					esc_attr( $image_class ),
 					esc_attr( $props['caption'] ),
@@ -62,10 +61,10 @@ if ( $attachment_ids ) {
 				$post->ID,
 				esc_attr( $image_class )
 			);
+		} 
+	} ?>
+</div>
 
-			$loop++;
-		}
 
-	?></div>
-	<?php
-}
+
+

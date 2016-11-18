@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $post, $product;
 ?>
-<div class="images">
+
 	<?php
 		if ( has_post_thumbnail() ) {
 			$attachment_count = count( $product->get_gallery_attachment_ids() );
@@ -35,7 +35,7 @@ global $post, $product;
 			echo apply_filters(
 				'woocommerce_single_product_image_html',
 				sprintf(
-					'<a href="%s" itemprop="image" class="woocommerce-main-image zoom" title="%s" data-rel="prettyPhoto%s">%s</a>',
+					'<div class="text-center"><a href="%s" itemprop="image" class="woocommerce-main-image zoom" title="%s" data-rel="prettyPhoto%s">%s</a></div>',
 					esc_url( $props['url'] ),
 					esc_attr( $props['caption'] ),
 					$gallery,
@@ -49,4 +49,4 @@ global $post, $product;
 
 		do_action( 'woocommerce_product_thumbnails' );
 	?>
-</div>
+

@@ -41,19 +41,20 @@ if ( ! defined( 'ABSPATH' ) ) {
     <section class="section-padding">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-5 col-sm-offset-1">
 
-            	<?php
-            		/**
-            		 * woocommerce_before_single_product_summary hook.
-            		 *
-            		 * @hooked woocommerce_show_product_sale_flash - 10
-            		 * @hooked woocommerce_show_product_images - 20
-            		 */
-            		do_action( 'woocommerce_before_single_product_summary' );
-            	?>
-
-                	<div class="summary entry-summary">
+                	<?php
+                		/**
+                		 * woocommerce_before_single_product_summary hook.
+                		 *
+                		 * @hooked woocommerce_show_product_sale_flash - 10
+                		 * @hooked woocommerce_show_product_images - 20
+                		 */
+                		do_action( 'woocommerce_before_single_product_summary' );
+                	?>
+                </div>
+                <div class="col-sm-5">
+                	
 
                 		<?php
                 			/**
@@ -70,13 +71,12 @@ if ( ! defined( 'ABSPATH' ) ) {
                 			do_action( 'woocommerce_single_product_summary' );
                 		?>
 
-                	</div><!-- .summary -->
+                	
                 </div>
             </div>
         </div>
     </section>
-<?php wc_get_template_part('single-product/product', 'description'); ?>
-<?php wc_get_template_part('single', 'product-reviews'); ?>shit
+
 	<?php
 		/**
 		 * woocommerce_after_single_product_summary hook.

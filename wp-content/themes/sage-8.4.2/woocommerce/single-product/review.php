@@ -36,7 +36,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		?>
 
 		<div class="comment-text">
-
+			
 			<?php
 			/**
 			 * The woocommerce_review_before_comment_meta hook.

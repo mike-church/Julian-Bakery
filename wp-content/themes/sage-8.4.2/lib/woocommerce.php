@@ -16,4 +16,5 @@ function woocommerce_template_loop_product_title(){ ?>
 
 function woocommerce_template_loop_rating(){}
 function woocommerce_template_loop_add_to_cart(){}
+function woocommerce_review_display_gravatar(){}
 

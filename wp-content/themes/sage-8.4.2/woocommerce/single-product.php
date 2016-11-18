@@ -31,13 +31,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 		do_action( 'woocommerce_before_main_content' );
 	?>
 
-<?php if ( function_exists('yoast_breadcrumb') ) {
-yoast_breadcrumb('
-<p id="breadcrumbs">','</p>
-');
-} ?>
-
-
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<?php wc_get_template_part( 'content', 'single-product' ); ?>
