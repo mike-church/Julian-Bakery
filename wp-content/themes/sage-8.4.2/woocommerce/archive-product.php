@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <?php
 if ( is_tax('type','paleo') ) { ?>
-    <section class="section-padding background-primary">
+    <section class="background-primary" style="padding-top:30px; padding-bottom:30px;">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
@@ -36,7 +36,7 @@ if ( is_tax('type','paleo') ) { ?>
     <?php
 }
 elseif ( is_tax('type','primal') ) { ?>
-    <section class="section-padding background-secondary">
+    <section class="background-secondary" style="padding-top:30px; padding-bottom:30px;">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
@@ -50,7 +50,7 @@ elseif ( is_tax('type','primal') ) { ?>
     <?php
 }
 elseif ( is_tax('type','pegan') ) { ?>
-    <section class="section-padding background-primary-alt-1">
+    <section class="background-primary-alt-1" style="padding-top:30px; padding-bottom:30px;">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
@@ -64,7 +64,7 @@ elseif ( is_tax('type','pegan') ) { ?>
     <?php
 }
 else { ?>
-    <section class="background-primary" style="padding-top:30px; padding-bottom:30px;">
+    <section class="background-brand" style="padding-top:30px; padding-bottom:30px;">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
