@@ -63,13 +63,13 @@
 		background-color:rgba($peter-river,.3);
 	}
 	.block-two:before {
-		background-color:$peter-river;
+		background-color:$black;
 	}
 	.block-three:before {
-		background-color:$sun-flower;
+		background-color:$black;
 	}	
 	.block-four:before {
-		background-color:$amethyst;
+		background-color:$black;
 	}
 	.block-two:after, .block-three:after, .block-four:after {
 		content:'';
@@ -81,13 +81,13 @@
 		z-index:2;
 	}
 	.block-two:after {
-		background-color:rgba($peter-river,.75);
+		background-color:rgba($black,.75);
 	}
 	.block-three:after {
-		background-color:rgba($sun-flower,.75);
+		background-color:rgba($black,.75);
 	}	
 	.block-four:after {
-		background-color:rgba($amethyst,.75);
+		background-color:rgba($black,.75);
 	}
 }
 .single-product {
