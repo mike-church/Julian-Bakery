@@ -60,7 +60,7 @@
 		mix-blend-mode:multiply;
 	}
 	.block-one:before {		
-		background-color:$brand;
+		background-color:rgba($peter-river,.3);
 	}
 	.block-two:before {
 		background-color:$peter-river;
