@@ -1,6 +1,6 @@
 <section class="home-hero" style="margin-top:-60px;">
 	<div class="row no-gutters">
-		<div class="col-sm-12 block-one" style="background-image:url(/wp-content/uploads/block-one.jpg);">
+		<div class="col-sm-12 block-one" style="background-image:url(/wp-content/uploads/hero.jpg);">
 			<div class="block">
 				<div class="vertical-center">
 					<div class="padding-30">
