@@ -28,6 +28,10 @@ $servings_per_container = rwmb_meta( 'nutrition_servings_per_container' );
 $calories = rwmb_meta( 'nutrition_calories' );
 $calories_from_fat = rwmb_meta( 'nutrition_calories_from_fat' );
 $fact_values = rwmb_meta( 'nutrition_facts' );
+$vitamin_values = rwmb_meta( 'nutrition_vitamins' );
+$ingredients = rwmb_meta( 'nutrition_ingredients' );
+$allergens = rwmb_meta( 'nutrition_allergens' );
+$info = rwmb_meta( 'nutrition_additional_notes' );
 
 
 ?>
@@ -36,8 +40,26 @@ $fact_values = rwmb_meta( 'nutrition_facts' );
 	
 	<div class="row">
 		<div class="col-sm-8">
-			<h2>Description</h2>
+			<h3>Description</h3>
 			<?php the_content(); ?>
+			<?php if ( ! empty( $ingredients) ) { ?>
+				<div class="margin-bottom-30">
+					<h4 class="margin-bottom-15">Ingredients</h4>
+					<?php echo $ingredients;?>
+				</div>
+			<?php } ?>
+			<?php if ( ! empty( $allergens) ) { ?> 
+				<div class="margin-bottom-30">
+					<h4 class="margin-bottom-15">Allergens</h4>
+					<?php echo $allergens;?>
+				</div>
+			<?php } ?>
+			<?php if ( ! empty( $info) ) { ?>
+				<div class="margin-bottom-30"> 
+					<h4 class="margin-bottom-15">Additional Info</h4>
+					<?php echo $info;?>
+				</div>
+			<?php } ?>
 		</div>
 		<div class="col-sm-4">
 			<div id="nutritionals" class="nutritional-info-container">
@@ -81,24 +103,31 @@ $fact_values = rwmb_meta( 'nutrition_facts' );
 							}
 						} ?>
 					</tbody>
+				</table>				
+				<table class="nutrition-table nutrition-bottom">
+					<tbody>
+						<?php if ( ! empty( $vitamin_values ) ) {
+							foreach ( $vitamin_values as $vitamin_value ) {
+							$vitamin = isset( $vitamin_value['nutrition_vitamin'] ) ? $vitamin_value['nutrition_vitamin'] : '';
+							$vitamin_percent = isset( $vitamin_value['nutrition_vitamin_percent'] ) ? $vitamin_value['nutrition_vitamin_percent'] : '';
+							?>
+							<tr>
+								<td><?php echo $vitamin;?></td>
+								<td class="text-right"><?php if ( ! empty( $vitamin_percent ) ) { ?> <?php echo $vitamin_percent;?> % <?php } ?></td>
+							</tr>
+							<?php
+							}
+						} ?>
+					</tbody>
 				</table>
-
-				
-
-
-
+				<div class="margin-top-15"><small>*Percent Daily Values are based on a 2,000 calorie diet</small></div>	
 			</div>
-
-
-
-
-
 		</div>
 	</div>
 
 <?php } else { ?>
 
-	<h2>Description</h2>
+	<h3>Description</h3>
 	<?php the_content(); ?>
 
 <?php } ?>

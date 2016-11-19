@@ -13,3 +13,7 @@
   @extend .btn;
   @extend .btn-default;
 }
+
+.comment-form-rating label, .comment-form-comment label, .comment-form-author label, .comment-form-email label {
+	font-size:14px;
+}

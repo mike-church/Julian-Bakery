@@ -4,8 +4,9 @@
 	border:none !important;
 	font-weight:$font-normal !important;
 }
-.button {
+.button, .submit {
 	background-color:$primary !important;
+	color:white !important;
 }
 .btn-default {
 	color:$primary;
