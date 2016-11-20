@@ -22,6 +22,7 @@ function woocommerce_template_single_title(){ ?>
 function woocommerce_template_single_meta(){ 
   $highlight_facts_values = rwmb_meta( 'nutrition_highlight_facts' );
   $net_carbs = rwmb_meta( 'nutrition_highlight_net_carbs' );
+  $calories = rwmb_meta( 'nutrition_calories' );
   ?>
 
     <?php if ( ! empty( $highlight_facts_values ) ) {
@@ -33,9 +34,12 @@ function woocommerce_template_single_meta(){
       <li><span><?php echo $value;?></span><br><?php echo $fact;?></li>
     <?php }
     echo '</li><li><span>'.$net_carbs.'</span><br>Net Carbs*</li>';
-    echo '<p><a href="#nutritionals">View Nutritionals <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a></p>';
-    echo '<p><small>*Net Carbs are calculated by subtracting Fiber from Total Carbohydrates.</p></div>';
     } ?>
+    <?php if ( ! empty( $calories ) ) { ?> 
+      <p><a href="#nutritionals">View Nutritionals <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a></p>
+    <?php } ?>
+      <p><small>*Net Carbs are calculated by subtracting Fiber from Total Carbohydrates.</p>
+    </div>
 
   <?php
 }
