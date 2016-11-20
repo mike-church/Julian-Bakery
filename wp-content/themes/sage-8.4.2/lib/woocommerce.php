@@ -38,8 +38,10 @@ function woocommerce_template_single_meta(){
     <?php if ( ! empty( $calories ) ) { ?> 
       <p><a href="#nutritionals">View Nutritionals <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a></p>
     <?php } ?>
-      <p><small>*Net Carbs are calculated by subtracting Fiber from Total Carbohydrates.</p>
+    <?php if ( ! empty( $highlight_facts_values ) ) { ?> 
+      <p><small>*Net Carbs are calculated by subtracting Fiber from Total Carbohydrates.</p>      
     </div>
+    <?php } ?>
 
   <?php
 }
