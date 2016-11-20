@@ -29,7 +29,7 @@ $video = rwmb_meta( 'video_youtube_id' );
 
 <?php if ( ! empty( $video ) ) { ?>
 
-	<div class="row">
+	<div class="row margin-top-15">
 		<div class="col-sm-4 col-md-3 margin-bottom-30">
 			<img src="http://placehold.it/180x179" class="img-responsive">
 		</div>

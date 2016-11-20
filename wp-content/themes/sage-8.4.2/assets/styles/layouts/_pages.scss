@@ -10,12 +10,14 @@
 	}
 }
 .home {
-	.block-one {
-		height:60vh;
+	.block-one {		
 		position: relative;
 		background-repeat:no-repeat;
 		background-position:center bottom;
 		background-size:cover;
+		h1 {
+			font-weight: $font-semi-bold;
+		}
 		.block {
 			position: absolute;
 			top:0;
@@ -29,7 +31,6 @@
 		}
 	}
 	.block-two, .block-three, .block-four {
-		height:40vh;
 		position: relative;
 		background-repeat:no-repeat;
 		background-position:center center;
@@ -90,25 +91,7 @@
 		background-color:rgba($black,.75);
 	}
 }
-.single-product {
-	.price {
-		.amount {
-			font-weight: $font-bold;
-			font-size: 32px;
-			color:$brand;
-		}
-		del {
-			display: block;
-			.amount {
-				font-size: 16px;	
-				color:$grey;		
-			}
-		}
-		ins {
-			text-decoration: none;
-		}
-	}
-}
+
 .masthead {
 	height:200px;
 	background-position:center center;
@@ -131,9 +114,15 @@
 
 /* Custom, iPhone Retina */ 
 @media only screen and (min-width : 320px) {
-	.hero {
-		height:300px;
-	} 
+	.home {
+		.block-one {
+			height:100vh;
+		}
+		.block-two, .block-three, .block-four {
+			height:300px;
+		}
+	}
+
 }
 
 /* Extra Small Devices, Phones */ 
@@ -143,9 +132,15 @@
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
-	.hero {
-		height:400px;
+	.home {
+		.block-one {
+			height:60vh;
+		}
+		.block-two, .block-three, .block-four {
+			height:40vh;
+		}
 	}
+
 }
 
 /* Medium Devices, Desktops */

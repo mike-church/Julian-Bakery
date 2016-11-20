@@ -38,7 +38,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <section class="section-padding">
+    <section class="product-hero">
         <div class="container">
             <div class="row">
                 <div class="col-sm-5 col-sm-offset-1">

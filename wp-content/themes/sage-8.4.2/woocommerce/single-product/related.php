@@ -53,7 +53,7 @@ if ( $products->have_posts() ) : ?>
 
             		<h2><?php _e( 'Related Products', 'woocommerce' ); ?></h2>
 
-            		<?php woocommerce_product_loop_start(); ?>
+            		<div class="row">
 
             			<?php while ( $products->have_posts() ) : $products->the_post(); ?>
 
@@ -61,7 +61,7 @@ if ( $products->have_posts() ) : ?>
 
             			<?php endwhile; // end of the loop. ?>
 
-            		<?php woocommerce_product_loop_end(); ?>
+            		</div>
 
             	</div>
             </div>

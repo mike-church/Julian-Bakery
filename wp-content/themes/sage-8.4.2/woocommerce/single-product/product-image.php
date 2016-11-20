@@ -22,7 +22,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $post, $product;
 ?>
-
 	<?php
 		if ( has_post_thumbnail() ) {
 			$attachment_count = count( $product->get_gallery_attachment_ids() );

@@ -14,9 +14,36 @@ function woocommerce_template_loop_product_title(){ ?>
 	<?php
 }
 
+function woocommerce_template_single_title(){ ?>
+    <h1 class="margin-bottom-30"><?php echo the_title(); ?></h1> 
+  <?php
+}
+
+function woocommerce_template_single_meta(){ 
+  $highlight_facts_values = rwmb_meta( 'nutrition_highlight_facts' );
+  $net_carbs = rwmb_meta( 'nutrition_highlight_net_carbs' );
+  ?>
+
+    <?php if ( ! empty( $highlight_facts_values ) ) {
+    echo '<div class="highlight-facts"><ul>';
+    foreach ( $highlight_facts_values as $highlight_facts_value ) {
+    $fact = isset( $highlight_facts_value['nutrition_highlight_fact'] ) ? $highlight_facts_value['nutrition_highlight_fact'] : '';
+    $value = isset( $highlight_facts_value['nutrition_highlight_value'] ) ? $highlight_facts_value['nutrition_highlight_value'] : '';
+    ?>      
+      <li><span><?php echo $value;?></span><br><?php echo $fact;?></li>
+    <?php }
+    echo '</li><li><span>'.$net_carbs.'</span><br>Net Carbs*</li>';
+    echo '<p><a href="#nutritionals">View Nutritionals <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a></p>';
+    echo '<p><small>*Net Carbs are calculated by subtracting Fiber from Total Carbohydrates.</p></div>';
+    } ?>
+
+  <?php
+}
+
 function woocommerce_template_loop_rating(){}
 function woocommerce_template_loop_add_to_cart(){}
 function woocommerce_review_display_gravatar(){}
+
 
 add_filter( 'woocommerce_breadcrumb_defaults', 'jk_change_breadcrumb_home_text' );
 function jk_change_breadcrumb_home_text( $defaults ) {
