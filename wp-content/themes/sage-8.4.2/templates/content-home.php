@@ -15,6 +15,7 @@
 			<div class="block">
 				<div class="vertical-center">
 					<div class="padding-30">
+						<p class="text-center color-white margin-bottom-15"><i class="icon-80 icon-paleo"></i></p>
 						<h5 class="text-center margin-bottom-15 color-white">Shop Paleo</h5>
 						<div class="text-center margin-bottom-0"><a href="/diet/paleo" class="btn btn-default">Shop</a></div>
 					</div>
@@ -25,6 +26,7 @@
 			<div class="block">
 				<div class="vertical-center">
 					<div class="padding-30">
+						<p class="text-center color-white margin-bottom-15"><i class="icon-80 icon-vegan"></i></p>
 						<h5 class="text-center margin-bottom-15 color-white">Shop Pegan</h5>
 						<p class="text-center margin-bottom-0"><a href="/diet/pegan" class="btn btn-default">Shop</a></p>
 					</div>
@@ -35,6 +37,7 @@
 			<div class="block">
 				<div class="vertical-center">
 					<div class="padding-30">
+						<p class="text-center color-white margin-bottom-15"><i class="icon-80 icon-cow"></i></p>
 						<h5 class="text-center margin-bottom-15 color-white">Shop Primal</h5>
 						<p class="text-center margin-bottom-0"><a href="/diet/primal" class="btn btn-default">Shop</a></p>
 					</div>

@@ -20,7 +20,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-echo "<div class='container'><div class='row'><div class='col-sm-12'>";
+echo "<div class='container hidden-xs'><div class='row'><div class='col-sm-12'>";
 if ( ! empty( $breadcrumb ) ) {
 
 	echo $wrap_before;

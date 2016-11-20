@@ -30,7 +30,12 @@ if ( ! $messages ){
 	<div class="row">
 		<div class="col-sm-12">
 			<?php foreach ( $messages as $message ) : ?>
-				<div class="alert alert-danger"><?php echo wp_kses_post( $message ); ?></div>
+
+				<div class="woocommerce-message alert alert-danger fade in alert-dismissable">
+				    <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+				    <?php echo wp_kses_post( $message ); ?>
+				</div>
+				
 			<?php endforeach; ?>				
 		</div>
 	</div>
