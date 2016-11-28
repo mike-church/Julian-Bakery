@@ -31,7 +31,10 @@ $video = rwmb_meta( 'video_youtube_id' );
 
 	<div class="row margin-top-15 hidden-xs">
 		<div class="col-sm-4 col-md-3 margin-bottom-30">
-			<img src="http://placehold.it/180x179" class="img-responsive">
+			<div style="position:relative;">
+			<a href="https://www.youtube.com/watch?v=<?php echo $video;?>" role="button" style="position:absolute; top:0; left:0; width:100%; height:100%; background-position:center center; background-repeat:no-repeat; background-size:cover; background-image:url(https://img.youtube.com/vi/<?php echo $video;?>/default.jpg);"></a>
+			<img src="http://placehold.it/100x100" class="img-responsive">
+			</div>
 		</div>
 		<?php if ( $attachment_ids ) {
 			foreach ( $attachment_ids as $attachment_id ) {
@@ -60,6 +63,7 @@ $video = rwmb_meta( 'video_youtube_id' );
 			} 
 		} ?>
 	</div>
+	<?php echo do_shortcode('[youtube-modal]');?>
 
 <?php } else { ?>
 
