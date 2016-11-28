@@ -81,18 +81,31 @@ else { ?>
 
 <section class="section-padding">
 	<div class="container">
-		<div class="row margin-bottom-30">
-			<div class="col-sm-3 col-lg-2">				
-				<button onclick="FWP.reset()" class="btn btn-primary btn-block">Clear All Filters</button>
+		<div class="row margin-bottom-30 hidden-md hidden-lg">
+			<div class="col-sm-12">
+				<div class="filter-bar">
+					<ul>
+						<li><?php echo facetwp_display( 'facet', 'diet_dropdown' ); ?> <?php echo facetwp_display( 'facet', 'categories_dropdown' ); ?> <?php echo facetwp_display( 'facet', 'features_dropdown' ); ?></li>
+						<li><button onclick="FWP.reset()" class="btn btn-primary"><i class="fa fa-undo" aria-hidden="true"></i> Reset</button></li>
+					</ul>
+				</div>
 			</div>
-			<div class="col-sm-9 col-lg-10">
-				<?php echo facetwp_display( 'counts' );?>
-				<?php echo facetwp_display( 'sort' );?>
-
+		</div>
+		<div class="row margin-bottom-30">
+			<div class="col-md-3 col-lg-2 hidden-xs hidden-sm">				
+				<button onclick="FWP.reset()" class="btn btn-primary btn-block"><i class="fa fa-undo" aria-hidden="true"></i> Reset Filters</button>
+			</div>
+			<div class="col-sm-12 col-md-9 col-lg-10">
+				<div class="sort-bar">
+					<ul>
+						<li>Showing: <?php echo facetwp_display( 'counts' );?></li>
+						<li><?php echo facetwp_display( 'sort' );?></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-sm-3 col-lg-2 sidebar">
+			<div class="col-md-3 col-lg-2 sidebar hidden-xs hidden-sm">
 				<div class="widget">
 					<div class="diet-type">
 						<?php echo facetwp_display( 'facet', 'product_type' ); ?>
@@ -105,7 +118,7 @@ else { ?>
 					<?php echo facetwp_display( 'facet', 'tags' ); ?>
 				</div>
 			</div>
-			<div class="col-sm-9 col-lg-10">
+			<div class="col-sm-12 col-md-9 col-lg-10">
 				<div class="row facetwp-template">					
 
 					<?php if ( have_posts() ) : ?>
@@ -128,9 +141,13 @@ else { ?>
 <section class="margin-bottom-60">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2">
-				<?php echo facetwp_display( 'counts' );?>			
-				<?php echo facetwp_display( 'per_page' );?>			
+			<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2">				
+				<div class="sort-bar">
+					<ul>
+						<li>Showing: <?php echo facetwp_display( 'counts' );?></li>
+						<li><?php echo facetwp_display( 'per_page' );?></li>
+					</ul>
+				</div>		
 			</div>
 		</div>
 	</div>

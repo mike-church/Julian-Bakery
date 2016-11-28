@@ -27,7 +27,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-<div class="col-sm-6 col-md-4">
+<div class="col-sm-4">
 
 	<div class="card margin-bottom-30 match-height">
     

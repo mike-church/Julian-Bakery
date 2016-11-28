@@ -158,9 +158,6 @@ main {padding-top:60px;}
 }
 
 // Padding
-.section-padding {
-	padding:80px 0;
-}
 .page-padding {
 	padding-top:90px;
 	padding-bottom:60px;
@@ -259,7 +256,10 @@ main {padding-top:60px;}
 	hr {
 	    border-top: 5px solid $light-grey-4;
 	    margin:30px 0;
-	}  
+	}
+	.section-padding {
+		padding:50px 0;
+	}
 }
 
 /* Extra Small Devices, Phones */ 
@@ -286,6 +286,9 @@ main {padding-top:60px;}
 	}
 	p, li {
 		font-size:16px;
+	}	
+	.section-padding {
+		padding:60px 0;
 	}
 }
 
@@ -308,6 +311,9 @@ main {padding-top:60px;}
 	}
 	p, li {
 		font-size:18px;
+	}	
+	.section-padding {
+		padding:80px 0;
 	}
 }
 
