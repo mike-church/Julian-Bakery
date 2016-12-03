@@ -29,13 +29,13 @@ $video = rwmb_meta( 'video_youtube_id' );
 
 <?php if ( ! empty( $video ) ) { ?>
 
-	<div class="row margin-top-15 hidden-xs">
-		<div class="col-sm-4 col-md-3 margin-bottom-30">
-			<div style="position:relative;">
-			<a href="https://www.youtube.com/watch?v=<?php echo $video;?>" role="button" style="position:absolute; top:0; left:0; width:100%; height:100%; background-position:center center; background-repeat:no-repeat; background-size:cover; background-image:url(https://img.youtube.com/vi/<?php echo $video;?>/default.jpg);"></a>
-			<img src="http://placehold.it/100x100" class="img-responsive">
+	<ul class="product-gallery hidden-xs">
+		<li>
+			<div class="video-thumb" style="background-image:url(https://img.youtube.com/vi/<?php echo $video;?>/default.jpg
+);">
+				<a href="https://www.youtube.com/watch?v=<?php echo $video;?>" class="zoom" title="" data-rel="prettyPhoto[product-gallery]"></a>
 			</div>
-		</div>
+		</li>
 		<?php if ( $attachment_ids ) {
 			foreach ( $attachment_ids as $attachment_id ) {
 
@@ -50,7 +50,7 @@ $video = rwmb_meta( 'video_youtube_id' );
 				echo apply_filters(
 					'woocommerce_single_product_image_thumbnail_html',
 					sprintf(
-						'<div class="col-sm-4 col-md-3 margin-bottom-30"><a href="%s" class="%s" title="%s" data-rel="prettyPhoto[product-gallery]">%s</a></div>',
+						'<li><a href="%s" class="%s" title="%s" data-rel="prettyPhoto[product-gallery]">%s</a></li>',
 						esc_url( $props['url'] ),
 						esc_attr( $image_class ),
 						esc_attr( $props['caption'] ),
@@ -62,8 +62,7 @@ $video = rwmb_meta( 'video_youtube_id' );
 				);
 			} 
 		} ?>
-	</div>
-	<?php echo do_shortcode('[youtube-modal]');?>
+	</ul>
 
 <?php } else { ?>
 

@@ -76,12 +76,12 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 		 */
 		do_action( 'woocommerce_after_shop_loop_item' );
 		?>
-		<div class="overlay">
+		<div class="overlay"></div>
+		<div class="card-link">
 			<div class="vertical-center text-center">
 				<a href="<?php the_permalink() ?>" class="btn btn-default btn-lg">View</a>
 			</div>
 		</div>
-
 	</div>
 
 </div>
